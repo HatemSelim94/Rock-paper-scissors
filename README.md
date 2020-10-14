@@ -2,7 +2,7 @@
 * Playing against four different bots with four different strategies.
 
 ### Result:
-* The proposed strategy wins at with a win rate of at least 69% in 1000 matches against each bot.
+* The proposed strategy wins with a win rate of at least 69% in 1000 matches against each bot.
 
 ### Strategy:
 * Using multiple strategies with a scoring system to decide the best strategy to follow in each round.
