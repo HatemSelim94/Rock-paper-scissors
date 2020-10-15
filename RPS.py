@@ -15,10 +15,18 @@ using its play against the opponent play.In another words, it updates the score 
 ex: my previous play is R and opponent play(state) is S so based on the score it chooses the maximum between RSR, RSP and RSS to decide the next play(action).
 the score of a the state-action pair is 0 for a win, -1 for a tie and -2 for a defeat.
 """
-def init_player(player):
-  player.__defaults__=(None,[],[],[],[[],[],[],[],[]],[0,0,0,0,0],[{'RRR':0,'RRP':0,'RRS':0,'RPR':0,'RPP':0,'RPS':0,'RSR':0,'RSP':0,'RSS':0,'PRR':0,'PRP':0,'PRS':0,'PPR':0,'PPP':0,'PPS':0,'PSR':0,'PSP':0,'PSS':0,'SRR':0,'SRP':0,'SRS':0,'SPR':0,'SPP':0,'SPS':0,'SSR':0,'SSP':0,'SSS':0}])
 
-def player(prev_play,opponent_history=[],my_history=[], strategies_history=[[]]*5,strategies_score=[0,0,0,0,0],state_action_pair = [{'RRR':0,'RRP':0,'RRS':0,'RPR':0,'RPP':0,'RPS':0,'RSR':0,'RSP':0,'RSS':0,'PRR':0,'PRP':0,'PRS':0,'PPR':0,'PPP':0,'PPS':0,'PSR':0,'PSP':0,'PSS':0,'SRR':0,'SRP':0,'SRS':0,'SPR':0,'SPP':0,'SPS':0,'SSR':0,'SSP':0,'SSS':0}]):
+def player(prev_play,opponent_history=[],my_history=[], strategies_history=[],strategies_score=[],state_action_pair = []):
+    if prev_play =="":
+      opponent_history.clear()
+      my_history.clear()
+      strategies_score.clear()
+      strategies_history.clear()
+      state_action_pair.clear()
+      for _ in range(5):
+        strategies_history.append([])
+        strategies_score.append(0)
+      state_action_pair.append({'RRR':0,'RRP':0,'RRS':0,'RPR':0,'RPP':0,'RPS':0,'RSR':0,'RSP':0,'RSS':0,'PRR':0,'PRP':0,'PRS':0,'PPR':0,'PPP':0,'PPS':0,'PSR':0,'PSP':0,'PSS':0,'SRR':0,'SRP':0,'SRS':0,'SPR':0,'SPP':0,'SPS':0,'SSR':0,'SSP':0,'SSS':0})
     actions=['R','P','S']
     strategies_number = 5
     opponent_history.append(prev_play)
