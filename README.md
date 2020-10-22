@@ -4,7 +4,7 @@
 ### Result:
 * The proposed strategy wins with a win rate of at least 69% in 1000 matches against each bot.
 
-### Strategy:
+### Strategy(Multi-Armed Bandits):
 * Using multiple strategies with a scoring system to decide the best strategy to follow in each round.
 * The score of each strategy gets updated each round.
 #### Strategies:
