@@ -1,10 +1,10 @@
-### Rock paper scissors:
+### Rock paper scissors([Multi-Armed Bandits](https://en.wikipedia.org/wiki/Multi-armed_bandit)):
 * Playing against four different bots with four different strategies.
 
 ### Result:
 * The proposed strategy wins with a win rate of at least 69% in 1000 matches against each bot.
 
-### Strategy([Multi-Armed Bandits](https://en.wikipedia.org/wiki/Multi-armed_bandit)):
+### Strategy:
 * Using multiple strategies with a scoring system to decide the best strategy to follow in each round.
 * The score of each strategy gets updated each round.
 #### Strategies:
